@@ -1,14 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, MessageCircle, Mail, Sparkles } from 'lucide-react';
+import { Instagram, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { scrollToTop } from '../utils/scrollUtils';
+import { BsWhatsapp, BsTelegram } from 'react-icons/bs';
 
 const Footer = () => {
   const socialLinks = [
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: MessageCircle, href: '#', label: 'WhatsApp' },
-    { icon: Mail, href: '#', label: 'Email' },
+    {
+      icon: Instagram,
+      href: 'https://www.instagram.com/fcs.clothing__/',
+      label: 'Instagram',
+    },
+    {
+      icon: BsWhatsapp,
+      href: 'https://api.whatsapp.com/send?phone=60104421026&text=Saya%20nak%20order%20jersey',
+      label: 'WhatsApp',
+    },
+    {
+      icon: BsTelegram,
+      href: 'https://t.me/designfocus12',
+      label: 'Telegram',
+    },
   ];
 
   const navLinks = [
@@ -29,8 +42,8 @@ const Footer = () => {
               <span className="text-xl font-bold text-white">FCS Clothing</span>
             </div>
             <p className="text-gray-400 text-sm">
-              Premium custom jerseys crafted with precision and style. 
-              Your vision, our expertise.
+              Aesthetic custom jerseys crafted with precision & style. Your
+              vision, our expertise.
             </p>
           </div>
 
@@ -59,6 +72,8 @@ const Footer = () => {
                 <motion.a
                   key={index}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   className="p-2 bg-purple-400/10 rounded-lg text-purple-400 hover:bg-purple-400/20 transition-colors"

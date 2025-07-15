@@ -1,15 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MessageCircle, Instagram, Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { BsWhatsapp, BsTelegram } from 'react-icons/bs';
 import Footer from '../components/Footer';
 
 const Contact = () => {
   const contactMethods = [
     {
-      icon: MessageCircle,
+      icon: BsWhatsapp,
       title: 'WhatsApp',
-      value: '+1 (555) 123-4567',
-      href: 'https://wa.me/15551234567',
+      value: '+60 10-442 1026',
+      href: 'https://api.whatsapp.com/send?phone=60104421026&text=Saya%20nak%20order%20jersey',
       description: 'Quick responses, instant communication',
       color: 'text-green-400',
       bgColor: 'bg-green-400/10',
@@ -19,18 +20,18 @@ const Contact = () => {
       icon: Instagram,
       title: 'Instagram',
       value: '@fcsclothing',
-      href: 'https://instagram.com/fcsclothing',
+      href: 'https://www.instagram.com/fcs.clothing__/',
       description: 'Follow us for latest designs and updates',
       color: 'text-pink-400',
       bgColor: 'bg-pink-400/10',
       borderColor: 'border-pink-400/20',
     },
     {
-      icon: Mail,
-      title: 'Email',
-      value: 'hello@fcsclothing.com',
-      href: 'mailto:hello@fcsclothing.com',
-      description: 'For detailed inquiries and support',
+      icon: BsTelegram,
+      title: 'Telegram',
+      value: 'Design Focus Official',
+      href: 'https://t.me/designfocus12',
+      description: 'Join our community to discover more of our designs',
       color: 'text-blue-400',
       bgColor: 'bg-blue-400/10',
       borderColor: 'border-blue-400/20',
@@ -41,19 +42,19 @@ const Contact = () => {
     {
       icon: Clock,
       title: 'Business Hours',
-      value: 'Mon - Fri: 9AM - 6PM',
+      value: 'Mon - Sat: 9AM - 6PM',
       subtitle: 'Weekend: 10AM - 4PM',
     },
     {
       icon: MapPin,
       title: 'Location',
-      value: 'New York, NY',
-      subtitle: 'Serving customers worldwide',
+      value: '37, Jalan Meru Bistari A9, Medan Meru Bestari, 31200 Ipoh, Perak',
+      subtitle: 'Serving customers nationwide',
     },
     {
       icon: Phone,
       title: 'Phone Support',
-      value: '+1 (555) 123-4567',
+      value: '+60 10-442 1026',
       subtitle: 'Available during business hours',
     },
   ];
@@ -186,7 +187,7 @@ const Contact = () => {
               },
               {
                 question: 'What file formats do you accept for designs?',
-                answer: 'We accept PNG, JPG, PDF, and AI files. For best results, we recommend high-resolution images (300 DPI or higher).',
+                answer: 'We accept PNG, JPG, and PDF files.',
               },
               {
                 question: 'Do you offer bulk discounts?',
