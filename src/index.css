@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sparkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #adeef7; /* golden sparkle */
+  border-radius: 50%;
+  box-shadow: 0 0 8px 2px #9cf3ff;
+  animation: sparkle-pulse 2s infinite ease-in-out;
+}
+
+@keyframes sparkle-pulse {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
