@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Sparkles } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { scrollToTop } from '../utils/scrollUtils';
 import { BsWhatsapp, BsTelegram } from 'react-icons/bs';
@@ -32,31 +32,39 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-black/30 backdrop-blur-md border-t border-white/10 mt-20">
+    <footer className="bg-black border-t border-white/10 mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <Sparkles className="h-8 w-8 text-purple-400" />
-              <span className="text-xl font-bold text-white">FCS Clothing</span>
+            <div className="flex items-center space-x-3">
+              <div className="w-12 h-12 bg-white flex items-center justify-center">
+                <span className="text-black font-display text-xl font-bold">FO</span>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-white font-condensed text-xl font-bold tracking-wider">
+                  FOCUS OFFICIAL
+                </span>
+                <span className="text-white/60 font-condensed text-xs tracking-widest uppercase">
+                  T-SHIRT SPECIALIST
+                </span>
+              </div>
             </div>
-            <p className="text-gray-400 text-sm">
-              Aesthetic custom jerseys crafted with precision & style. Your
-              vision, our expertise.
+            <p className="text-white/70 font-body text-sm">
+              Premium custom jerseys engineered for performance and crafted for champions. Your vision, our expertise.
             </p>
           </div>
 
           {/* Navigation */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Quick Links</h3>
+            <h3 className="text-lg font-condensed font-bold text-white tracking-wider uppercase">Quick Links</h3>
             <div className="space-y-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.path}
                   onClick={scrollToTop}
-                  className="block text-gray-400 hover:text-purple-400 transition-colors text-sm"
+                  className="block text-white/70 hover:text-white transition-colors font-body text-sm focus-ring"
                 >
                   {link.name}
                 </Link>
@@ -66,7 +74,7 @@ const Footer = () => {
 
           {/* Social Media */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Connect With Us</h3>
+            <h3 className="text-lg font-condensed font-bold text-white tracking-wider uppercase">Connect With Us</h3>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
                 <motion.a
@@ -76,7 +84,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  className="p-2 bg-purple-400/10 rounded-lg text-purple-400 hover:bg-purple-400/20 transition-colors"
+                  className="p-2 bg-white/10 text-white hover:bg-white hover:text-black transition-colors focus-ring"
                   aria-label={social.label}
                 >
                   <social.icon className="h-5 w-5" />
@@ -87,8 +95,8 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/10 mt-8 pt-8 text-center">
-          <p className="text-gray-400 text-sm">
-            © 2025 FCS Clothing. All rights reserved.
+          <p className="text-white/60 font-body text-sm">
+            © 2025 Focus Official. All rights reserved.
           </p>
         </div>
       </div>

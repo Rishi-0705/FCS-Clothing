@@ -1,24 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Barlow+Condensed:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.sparkle {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background-color: #adeef7; /* golden sparkle */
-  border-radius: 50%;
-  box-shadow: 0 0 8px 2px #9cf3ff;
-  animation: sparkle-pulse 2s infinite ease-in-out;
-}
-
-@keyframes sparkle-pulse {
+/* Geometric pulse animation */
+@keyframes geometric-pulse {
   0%, 100% {
-    opacity: 0.2;
-    transform: scale(1);
+    opacity: 0.3;
+    transform: scale(1) rotate(0deg);
   }
   50% {
-    opacity: 1;
-    transform: scale(1.5);
+    opacity: 0.8;
+    transform: scale(1.1) rotate(180deg);
   }
+}
+
+/* Sporty line animation */
+@keyframes sporty-line {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(100vw) skewX(-15deg);
+  }
+}
+
+/* Metallic shimmer effect */
+@keyframes metallic-shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Pulsing ring animation */
+@keyframes pulsing-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+/* Geometric shapes */
+.geometric-shape {
+  position: absolute;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  animation: geometric-pulse 4s infinite ease-in-out;
+}
+
+.geometric-shape:nth-child(1) {
+  width: 100px;
+  height: 100px;
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.geometric-shape:nth-child(2) {
+  width: 60px;
+  height: 60px;
+  top: 60%;
+  right: 15%;
+  animation-delay: 1s;
+  border-radius: 50%;
+}
+
+.geometric-shape:nth-child(3) {
+  width: 80px;
+  height: 80px;
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 2s;
+  transform: rotate(45deg);
+}
+
+/* Sporty lines */
+.sporty-line {
+  position: absolute;
+  height: 2px;
+  width: 200px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  animation: sporty-line 8s infinite linear;
+  transform: skewX(-15deg);
+}
+
+.sporty-line:nth-child(1) {
+  top: 25%;
+  animation-delay: 0s;
+}
+
+.sporty-line:nth-child(2) {
+  top: 45%;
+  animation-delay: 2s;
+}
+
+.sporty-line:nth-child(3) {
+  top: 65%;
+  animation-delay: 4s;
+}
+
+/* Pulsing rings */
+.pulsing-ring {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  animation: pulsing-ring 3s infinite ease-out;
+}
+
+.pulsing-ring:nth-child(1) {
+  width: 100px;
+  height: 100px;
+  top: 30%;
+  right: 20%;
+  animation-delay: 0s;
+}
+
+.pulsing-ring:nth-child(2) {
+  width: 150px;
+  height: 150px;
+  bottom: 30%;
+  left: 15%;
+  animation-delay: 1s;
+}
+
+/* Metallic button effect */
+.metallic-button {
+  background: linear-gradient(45deg, #000, #1a1a1a, #000);
+  background-size: 200% 200%;
+  position: relative;
+  overflow: hidden;
+}
+
+.metallic-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.metallic-button:hover::before {
+  left: 100%;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+/* Focus ring for accessibility */
+.focus-ring:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }

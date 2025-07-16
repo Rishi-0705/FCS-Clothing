@@ -10,63 +10,60 @@ const Collection = () => {
   const jerseys = [
     {
       id: 1,
-      title: 'School Jersey',
+      title: 'SCHOOL JERSEY',
       images: [
         'https://i.postimg.cc/k4cHkNF3/sek1.jpg',
         'https://i.postimg.cc/XNshL8Y9/sek2.jpg',
-    
       ],
-      category: 'Jersey',
+      category: 'EDUCATION',
     },
     {
       id: 2,
-      title: 'Towards Glory',
+      title: 'TOWARDS GLORY',
       images: [
         'https://i.postimg.cc/ryNxWngN/tcs10.jpg',
         'https://i.postimg.cc/zfhRf0VW/tcs11.jpg',
-       
       ],
-      category: 'Jersey',
+      category: 'COMPETITION',
     },
     {
       id: 3,
-      title: 'Towards Glory',
+      title: 'TOWARDS GLORY',
       images: [
         'https://i.postimg.cc/7LPYF9Sw/tcs12.jpg',
         'https://i.postimg.cc/nV9cfC9j/tcs13.jpg',
-        
       ],
-      category: 'Jersey',
+      category: 'COMPETITION',
     },
     {
       id: 4,
-      title: 'Danau Ratlers',
+      title: 'DANAU RATTLERS',
       images: [
         'https://i.postimg.cc/rFv42Bpc/danau3.jpg',
         'https://i.postimg.cc/85PJbDZd/danau2.jpg',
         'https://i.postimg.cc/4xkYSp8x/danau1.jpg',
       ],
-      category: 'Jersey',
+      category: 'TEAM',
     },
     {
       id: 5,
-      title: 'Skuses',
+      title: 'SKUSES',
       images: [
         'https://i.postimg.cc/Twpm6fnd/skuses1.jpg',
         'https://i.postimg.cc/SR9MndZH/skuses2.jpg',
         'https://i.postimg.cc/PrmDh6vw/skuses3.jpg',
       ],
-      category: 'Jersey',
+      category: 'TEAM',
     },
     {
       id: 6,
-      title: 'Football Jersey ',
+      title: 'FOOTBALL JERSEY',
       images: [
         'https://i.postimg.cc/HWbn7rWG/01.jpg',
         'https://i.postimg.cc/rpdFymZP/02.jpg',
         'https://i.postimg.cc/mDCLMns3/03.jpg',
       ],
-      category: 'Jersey',
+      category: 'SPORTS',
     },
   ];
 
@@ -97,7 +94,7 @@ const Collection = () => {
   };
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-20 bg-black">
       {/* Header */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -105,17 +102,18 @@ const Collection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-bold text-white mb-6"
+            className="text-5xl md:text-6xl font-display font-bold text-white mb-6 tracking-wider"
           >
-            Our Collection
+            OUR COLLECTION
           </motion.h1>
+          <div className="w-24 h-0.5 bg-white mx-auto mb-6"></div>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-gray-400 max-w-3xl mx-auto"
+            className="text-xl text-white/70 font-body max-w-3xl mx-auto"
           >
-            Explore our gallery of custom-made jerseys. Click on any jersey to view more of it.
+            Explore our gallery of custom-made jerseys. Click on any jersey to view more details.
           </motion.p>
         </div>
       </section>
@@ -134,18 +132,18 @@ const Collection = () => {
                 onClick={() => openModal(jersey)}
                 className="group cursor-pointer"
               >
-                <div className="relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-purple-400/30 transition-all duration-300">
+                <div className="relative overflow-hidden bg-white border border-white/10 hover:border-white/30 transition-all duration-300">
                   <img
                     src={jersey.images[0]}
                     alt={jersey.title}
                     className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                  <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                   <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-200">
-                    <span className="inline-block px-3 py-1 bg-purple-600/80 text-white text-xs font-semibold rounded-full mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                    <span className="inline-block px-3 py-1 bg-white text-black font-condensed font-bold text-xs tracking-wider uppercase mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                       {jersey.category}
                     </span>
-                    <h3 className="text-white font-semibold text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                    <h3 className="text-white font-condensed font-bold text-lg tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                       {jersey.title}
                     </h3>
                   </div>
@@ -157,7 +155,7 @@ const Collection = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-focus-gray">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -166,10 +164,11 @@ const Collection = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Customer Reviews
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4 tracking-wider">
+              CUSTOMER REVIEWS
             </h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            <div className="w-24 h-0.5 bg-white mx-auto mb-6"></div>
+            <p className="text-white/70 font-body text-lg max-w-2xl mx-auto">
               See what our customers are saying about their custom jerseys.
             </p>
           </motion.div>
@@ -177,37 +176,37 @@ const Collection = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                name: "Hanif Lukman",
+                name: "HANIF LUKMAN",
                 role: "",
                 content: "Outstanding quality and attention to detail. Our team looks professional!",
                 rating: 5
               },
               {
-                name: "Nicholas Johnson",
+                name: "NICHOLAS JOHNSON",
                 role: "",
                 content: "Quick turnaround time and excellent communication throughout the process.",
                 rating: 5
               },
               {
-                name: "Zubairi",
+                name: "ZUBAIRI",
                 role: "",
-                content: "The custom designs exceeded our expectations. Highly recommend FCS Clothing!",
+                content: "The custom designs exceeded our expectations. Highly recommend Focus Official!",
                 rating: 5
               },
               {
-                name: "Emily Salvet",
+                name: "EMILY SALVET",
                 role: "",
                 content: "Perfect fit and amazing quality. The jerseys look exactly like our design.",
                 rating: 5
               },
               {
-                name: "Kumaravel",
+                name: "KUMARAVEL",
                 role: "",
                 content: "Professional service from start to finish. Will definitely order again!",
                 rating: 5
               },
               {
-                name: "Yor Xin Yi",
+                name: "YOR XIN YI",
                 role: "",
                 content: "Fantastic experience! The team was helpful and the final product was perfect.",
                 rating: 5
@@ -219,17 +218,17 @@ const Collection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"
+                className="bg-black border border-white/10 p-6"
               >
                 <div className="flex mb-3">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} className="text-yellow-400">★</span>
+                    <span key={i} className="text-white">★</span>
                   ))}
                 </div>
-                <p className="text-gray-300 mb-4 text-sm italic">"{testimonial.content}"</p>
+                <p className="text-white/80 font-body mb-4 text-sm italic">"{testimonial.content}"</p>
                 <div>
-                  <p className="text-white font-semibold text-sm">{testimonial.name}</p>
-                  <p className="text-purple-400 text-xs">{testimonial.role}</p>
+                  <p className="text-white font-condensed font-bold text-sm tracking-wider">{testimonial.name}</p>
+                  <p className="text-white/60 font-condensed text-xs tracking-wider">{testimonial.role}</p>
                 </div>
               </motion.div>
             ))}
@@ -244,7 +243,7 @@ const Collection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90"
             onClick={closeModal}
           >
             <motion.div
@@ -252,12 +251,12 @@ const Collection = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative max-w-2xl w-full max-h-[90vh] bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 overflow-hidden"
+              className="relative max-w-2xl w-full max-h-[90vh] bg-focus-gray border border-white/20 overflow-hidden"
             >
               {/* Close Button */}
               <button
                 onClick={closeModal}
-                className="absolute top-4 right-4 z-20 p-2 bg-black/70 hover:bg-black/90 text-white rounded-full transition-colors"
+                className="absolute top-4 right-4 z-20 p-2 bg-black/70 hover:bg-black text-white transition-colors focus-ring"
               >
                 <X className="h-6 w-6" />
               </button>
@@ -273,13 +272,13 @@ const Collection = () => {
                 {/* Navigation Buttons */}
                 <button
                   onClick={prevImage}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 bg-black/70 hover:bg-black/90 text-white rounded-full transition-colors"
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 bg-black/70 hover:bg-black text-white transition-colors focus-ring"
                 >
                   <ChevronLeft className="h-6 w-6" />
                 </button>
                 <button
                   onClick={nextImage}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 bg-black/70 hover:bg-black/90 text-white rounded-full transition-colors"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 bg-black/70 hover:bg-black text-white transition-colors focus-ring"
                 >
                   <ChevronRight className="h-6 w-6" />
                 </button>
@@ -290,8 +289,8 @@ const Collection = () => {
                     <button
                       key={index}
                       onClick={() => setCurrentImageIndex(index)}
-                      className={`w-2 h-2 rounded-full transition-colors ${
-                        index === currentImageIndex ? 'bg-purple-400' : 'bg-white/50'
+                      className={`w-2 h-2 transition-colors ${
+                        index === currentImageIndex ? 'bg-white' : 'bg-white/50'
                       }`}
                     />
                   ))}
@@ -300,14 +299,14 @@ const Collection = () => {
 
               {/* Jersey Info */}
               <div className="p-4">
-                <span className="inline-block px-3 py-1 bg-purple-600/80 text-white text-sm font-semibold rounded-full mb-3">
+                <span className="inline-block px-3 py-1 bg-white text-black font-condensed font-bold text-sm tracking-wider uppercase mb-3">
                   {selectedJersey.category}
                 </span>
-                <h3 className="text-xl font-bold text-white mb-2">
+                <h3 className="text-xl font-condensed font-bold text-white mb-2 tracking-wider">
                   {selectedJersey.title}
                 </h3>
-                <p className="text-gray-400 text-sm">
-                  Swipe left or right to view this jersey from different angles.
+                <p className="text-white/70 font-body text-sm">
+                  Navigate through images to view this jersey from different angles.
                 </p>
               </div>
             </motion.div>
