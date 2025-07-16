@@ -74,7 +74,7 @@ const OrderNow = () => {
               href="https://forms.gle/PdApro9EuG4gXB2W7"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-4 bg-white text-black font-condensed font-bold tracking-wider uppercase hover:bg-focus-silver transition-all duration-300 transform hover:scale-105 focus-ring metallic-button"
+              className="inline-flex items-center px-8 py-4 bg-white text-black font-condensed font-bold tracking-wider uppercase hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 focus-ring shadow-lg"
             >
               OPEN ORDER FORM
             </a>

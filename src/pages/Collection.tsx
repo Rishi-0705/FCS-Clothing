@@ -251,7 +251,7 @@ const Collection = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative max-w-2xl w-full max-h-[90vh] bg-focus-gray border border-white/20 overflow-hidden"
+              className="relative max-w-4xl w-full max-h-[90vh] bg-focus-gray border border-white/20 overflow-hidden"
             >
               {/* Close Button */}
               <button
@@ -266,7 +266,7 @@ const Collection = () => {
                 <img
                   src={selectedJersey.images[currentImageIndex]}
                   alt={selectedJersey.title}
-                  className="w-full h-64 md:h-80 object-cover"
+                  className="w-full h-96 md:h-[500px] object-contain bg-white"
                 />
 
                 {/* Navigation Buttons */}

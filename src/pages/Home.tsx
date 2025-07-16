@@ -118,7 +118,7 @@ const Home = () => {
           >
             <Link
               to="/order"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-black font-condensed font-bold text-lg tracking-wider uppercase hover:bg-focus-silver transition-all duration-300 transform hover:scale-105 focus-ring metallic-button"
+              className="inline-flex items-center justify-center px-8 py-4 bg-white text-black font-condensed font-bold text-lg tracking-wider uppercase hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 focus-ring shadow-lg"
             >
               ORDER NOW
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -236,6 +236,11 @@ const Home = () => {
           >
             <Link
               to="/collection"
+              onClick={() => {
+                setTimeout(() => {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }, 100);
+              }}
               className="inline-flex items-center px-8 py-3 bg-transparent border-2 border-white text-white font-condensed font-bold tracking-wider uppercase hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105 focus-ring"
             >
               VIEW FULL COLLECTION
